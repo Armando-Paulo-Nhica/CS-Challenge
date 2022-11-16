@@ -47,7 +47,6 @@ public class HomeController : Controller
             }
             else 
             {
-                //log response status here..
 
                 countries = Enumerable.Empty<Root>();
 
