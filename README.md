@@ -1,8 +1,8 @@
 # Desafio de programação - Desenvolvimento de um Client Rest C#
 ### Instruções de Instalação
 
-- **Passo 1**: Download do dotnet-sdk  
-Pode baixar dotnet sdk seguindo o link [baixar dotnet SDK e runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- **Passo 1**: Download do dotnet-sdk  e dotnet-runtime  
+Pode fazer o download seguindo o link [baixar dotnet SDK e runtime](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 - **Passo 2**: Instalação do dotnet-sdk e dotnet-runtime  
 Após baixar, instale o programa dotnet sdk e runtime respectivamente
