@@ -8,7 +8,7 @@ using OfficeOpenXml;
 public class HomeController : Controller
 {
     private const string xmlFile = "countries.xml";
-    // GET: Student
+    
     public ActionResult Index()
     {
         IEnumerable<Root> countries = null;
@@ -57,10 +57,7 @@ public class HomeController : Controller
 
         return countries;
     }
-    // Gerar ficheiro XML
-    // public ActionResult GenerateXLS(){
-        
-    // }
+   
     // Gerar ficheiro XLS
     [HttpGet("xml")]
      public void GenerateXML(){
