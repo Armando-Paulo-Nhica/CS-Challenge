@@ -1,0 +1,130 @@
+﻿@model IEnumerable<MyApp.Models.Root>
+  @namespace System
+  
+@{
+    ViewData["Title"] = "Página inicial";
+}
+
+
+
+<div class="col-xl-12 row mb-20">
+
+      <div class="col-xl-2 p-3 left" >
+          <span class="mrgin-b"><i class="fas fa-search"></i> Filtros</span>
+          <h3 class="fs-3">Categorias</h3>
+          <ul class="list-cat">
+              <li class="mb-3"><a href="" class="text-decoration-none text-dark"><i class="fas fa-caret-right mr-2"></i> Todos países</a></li>
+              <li class="mb-3"><a href="" class="text-decoration-none text-dark"><i class="fas fa-caret-right mr-2"></i> Por continente</a></li>
+          </ul>
+
+      </div>
+    
+    <div class="col-xl-10 ">
+
+    @* Table section *@
+           
+              
+                 <div class="col-xl-12 col-md-12 p-3 d-flex justify-content-end">
+                   <span type="button" class="btn btn-success btn-sm" id="btn-download">Exportar <i class="fas fa-caret-down"></i></span>
+                    
+                </div>
+                <div class="dropdown-content justify-content-end p-2" id="sec-details">
+                   
+                         <div class="col-xl-12 d-flex justify-content-end col-lg-12 dpd-close" id="dpd-close"><i>X</i> </div>
+                           <div class="col-xl-12 col-lg-12 dpd-header mb-3">
+                            <span><i class="fas mt-2 mb-2"></i> Tipo de arquivo</span>
+                            
+                           </div>
+                   
+                                <form>
+                                <input type="radio" name="gender" id="xls" value="XLS" class="mb-3"> XLS<br>
+                                <input type="radio" name="gender" id="csv" value="CSV" class="mb-3"> CSV <br>
+                                <input type="radio" name="gender" id="xml" value="XML" class="mb-3"> XML
+                                </form>
+                            
+                           <div class="dpd-footer">
+                            <button type="submit" id="btn-submit" class="btn btn-success d-flex justify-content-end btn-sm"><i class="fas fa-download"> </i> Continuar</button>
+                           
+                           </div>
+
+                        
+                    </div>
+                
+
+              <div class="card-body line-round mb-15">
+                <div class="table-responsive overflow-y">
+                
+
+          <table id="example" class="display" style="width:100%">
+              <thead>
+                  <tr class="text-danger">
+                      <th>Nome</th>
+                      <th>Capital</th>
+                      <th>Região</th>
+                      <th>Sub-Região</th>
+                      <th>População</th>
+                      <th>Área</th>
+                      <th>Fuso horário</th>
+                      <th>Nome Nativo</th>
+                      <th>Bandeira</th>
+                  </tr>
+              </thead>
+              <tbody>
+                @functions {
+                          public string GetFlag(Microsoft.AspNetCore.Html.IHtmlContent file)
+                          {
+                              using (var writer = new System.IO.StringWriter())
+                              {        
+                                  file.WriteTo(writer, System.Text.Encodings.Web.HtmlEncoder.Default);
+                                  return writer.ToString();
+                              } 
+                          }
+                      }
+                      
+              @foreach (var item in Model)
+              {
+                
+                
+                var flag = GetFlag(@Html.DisplayFor(modelItem => item.flags.png));
+                
+                string str = flag.Replace('/','@');
+               
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.name.official)</td>
+                    <td>@Html.DisplayFor(modelItem => item.capital)</td>
+                    <td>@Html.DisplayFor(modelItem => item.region)</td>
+                    <td>@Html.DisplayFor(modelItem => item.subRegion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.population)</td>
+                    <td>@Html.DisplayFor(modelItem => item.area)</td>
+                    <td>@Html.DisplayFor(modelItem => item.timezones)</td>
+                    <td>@Html.DisplayFor(modelItem => item.name.nativeName.spa)</td>
+                    
+                    <td><a href="../flag/@str" class="btn btn-sm btn-outline-success"><i class="fas fa-eye"></i> Ver</a></td>
+                    
+                </tr>
+              }
+              </tbody>
+              <tfoot>
+                  <tr class="text-danger">
+                      <th>Nome</th>
+                      <th>Capital</th>
+                      <th>Região</th>
+                      <th>Sub-Região</th>
+                      <th>População</th>
+                      <th>Área</th>
+                      <th>Fuso horário</th>
+                      <th>Nome Nativo</th>
+                      <th>Bandeira</th>
+                  </tr>
+              </tfoot>
+          </table>   
+                  
+                  
+                
+        @* End of table section *@
+          </div>
+          
+        </div>
+
+
+

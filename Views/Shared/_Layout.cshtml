@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/fonts/fontawesome/css/all.css" asp-append-version="true" />
+    
+    <!-- CSS Files -->
+  
+   <link href="~/assets/css/now-ui-dashboard.css?v=1.5.0" rel="stylesheet" /> 
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="~/assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="~/css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+  
+  
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blue border-bottom box-shadow">
+            <div class="container-fluid">
+               
+                <div class="navbar-collapse collapse d-sm-inline-flex d-flex justify-content-center">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item ">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home icon"></i> Página inicial</a>
+                        </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted ">
+        <div class="container d-flex justify-content-center">
+            &copy; 2022 - Desafio de programação- <a asp-area=""  class="text-decoration-none text-dark" asp-controller="Home" asp-action="Privacy">Desenvolvedor de software-Plataforma .NET</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>
+    
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,203 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(241, 238, 238);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid white;
+    /* creates padding around scroll thumb */
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
+.list-cat {
+    list-style-type: none;
+}
+
+.margin-b {
+    margin-bottom: 20px;
+}
+
+.left h3 {
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: inherit
+}
+
+.tb-scroll {
+    overflow-x: auto;
+    /* Hide horizontal scrollbar */
+    overflow-y: auto;
+    /* Add vertical scrollbar */
+}
+
+.line {
+    border-bottom: 1px solid rgb(233, 227, 227);
+}
+
+.line-round {
+    border-top: 1px solid rgb(240, 237, 237);
+    border-left: 1px solid rgb(240, 237, 237);
+    border-right: 1px solid rgb(240, 237, 237);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+
+/* Style The Dropdown Button */
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    right: 10%;
+    background-color: #f9f9f9;
+    width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.dpd-header {
+    border-bottom: 1px solid rgb(240, 237, 237);
+}
+
+.dpd-footer {
+    border-top: 1px solid rgb(240, 237, 237);
+}
+
+.dpd-close i {
+    padding: 3px 9px;
+    font-style: normal;
+}
+
+#dpd-close i:hover {
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+
+.overflow-y {
+    height: 40vh;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.overflow-y::-webkit-scrollbar {
+    width: 8px;
+    padding: 4px;
+    border: 1px solid rgb(241, 238, 238);
+}
+
+.overflow-y::-webkit-scrollbar-thumb {
+    background-color: rgba(207, 211, 214, 0.527);
+    border-radius: 20px;
+    padding: 15px 2%;
+}
+
+.mt-15 {
+    margin-top: 50px;
+}
+
+.mt-100 {
+    margin-top: 6.25rem;
+}
+
+.line th {
+    color: rgba(8, 141, 41, );
+}
+
+.custom td {
+    max-height: 5px;
+}
+
+.img img {
+    width: 75%;
+    max-width: 75%;
+    max-height: 25%;
+}
+
+#names {
+    width: 80px;
+}
+
+td {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width:100px;
+}
